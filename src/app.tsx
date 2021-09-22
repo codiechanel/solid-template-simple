@@ -1,6 +1,6 @@
 import type { Component } from "solid-js";
 import { Link, useRoutes, useLocation } from "solid-app-router";
-
+import { HiSolidMenu, HiSolidBell } from "solid-icons/hi";
 import { routes } from "./routes";
 
 const App: Component = () => {
@@ -10,6 +10,7 @@ const App: Component = () => {
   return (
     <>
       <nav class="bg-gray-200 text-gray-900 px-4">
+        <HiSolidMenu className="h-6 w-6" />
         <ul class="flex items-center">
           <li class="py-2 px-4">
             <Link href="/" class="no-underline hover:underline">
