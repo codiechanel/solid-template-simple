@@ -5,7 +5,7 @@ export default function Home() {
 
   return (
     <>
-      <div class="bg-primary-3 h-[4px]" />
+      <div class="bg-primary-3 h-[4px] " />
       <section class="bg-gray-100 text-gray-700 min-h-screen flex">
         <div class="w-80 max-w-md bg-primary-1">
           <div class="m-8">
