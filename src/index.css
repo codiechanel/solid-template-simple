@@ -2,23 +2,7 @@ html {
     height: 100%;
 }
 
-:root {
-    --primary-1: #21252b;
-    --primary-2: #282c34;
-    --primary-3: #323844;
-}
 
-.bg-primary-1 {
-    background-color: var(--primary-1);
-}
-
-.bg-primary-2 {
-    background-color: var(--primary-2);
-}
-
-.bg-primary-3 {
-    background-color: var(--primary-3);
-}
 
 p {
     margin-bottom: 16px;

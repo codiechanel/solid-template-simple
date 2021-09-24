@@ -1,5 +1,6 @@
 // import MenuIcon from "../heroicons/solid/menu.svg";
 import { HiSolidMenu, HiSolidBell } from "solid-icons/hi";
+import { tw } from "twind";
 export default function MyNav() {
   return (
     /*main disclosure*/
