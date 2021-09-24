@@ -4,27 +4,18 @@ export default function Home() {
   const [count, setCount] = createSignal(0);
 
   return (
-    <section class="bg-gray-100 text-gray-700 p-8">
-      <h1 class="text-2xl font-bold">Home</h1>
-      <p class="mt-4">This is the home page.</p>
+    <section class="bg-gray-100 text-gray-700 min-h-screen flex">
+        <div class="w-80 max-w-md bg-primary-1">
+            <p>Home</p>
+        </div>
+        <div class="bg-gray-700 flex-1 p-8">
+            <div class="max-w-lg p-4  h-[400px] relative">
+                <div class="absolute inset-0 overflow-auto flex">
+                   Column
+                </div>
+            </div>
+        </div>
 
-      <div class="flex items-center space-x-2">
-        <button
-          class="border rounded-lg px-2 border-gray-900"
-          onClick={() => setCount(count() - 1)}
-        >
-          -
-        </button>
-
-        <output class="p-10px">Count: {count}</output>
-
-        <button
-          class="border rounded-lg px-2 border-gray-900"
-          onClick={() => setCount(count() + 1)}
-        >
-          +
-        </button>
-      </div>
     </section>
   );
 }

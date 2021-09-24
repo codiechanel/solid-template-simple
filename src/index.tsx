@@ -3,7 +3,7 @@
 import { render } from "solid-js/web";
 import { Router } from "solid-app-router";
 import App from "./app";
-import "virtual:windi.css";
+// import "virtual:windi.css";
 import "./index.css"
 
 render(
