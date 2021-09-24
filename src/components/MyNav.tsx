@@ -3,7 +3,7 @@ import { HiSolidMenu, HiSolidBell } from "solid-icons/hi";
 export default function MyNav() {
   return (
     /*main disclosure*/
-    <div class="bg-gray-800">
+    <div class="bg-primary-1">
       <div class="mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-12 md:h-16">
           {/*x buttton sm:hidden */}
