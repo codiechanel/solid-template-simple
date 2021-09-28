@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <section class="bg-gray-100 text-gray-700 flex bg-yellow-500 flex-1">
+      <section class="bg-gray-100 text-gray-500 flex bg-yellow-500 flex-1">
         <div class="w-80 max-w-md bg-primary-1">
           <Categories />
         </div>
