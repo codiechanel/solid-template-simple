@@ -1,21 +1,11 @@
 import { HiSolidPlusCircle } from "solid-icons/hi";
-import {
-  createResource,
-  createSignal,
-  For,
-  Match,
-  Switch,
-  Suspense,
-} from "solid-js";
-// import Modal from "./Modal";
+import { createSignal, For, Suspense } from "solid-js";
 
 import { useNavigate } from "solid-app-router";
 import { ChakraInput } from "@codiechanel/solid-lib-simple/Chakra";
-// import {categories, categoriesAction} from "../common/resource";
 import { TwButton } from "@codiechanel/solid-lib-simple/Tailwind";
 import { Modal } from "@codiechanel/solid-lib-simple/Mine";
 import { useStore } from "../../store";
-// import {createCategoryToDB} from "../common/api";
 
 export default function Categories(props) {
   const [store, { createCategoryToDB }] = useStore();

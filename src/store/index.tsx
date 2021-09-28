@@ -5,9 +5,14 @@ import createAgent from "./createAgent";
 import createArticles from "./createArticles";
 
 interface AppStore extends Array<StoreState | StoreActions> {
-  0: StoreState;
-  1: StoreActions;
+  0?: StoreState;
+  1?: StoreActions;
 }
+
+/*interface AppProps {
+  value: AppStore
+  children: any
+}*/
 
 const StoreContext = createContext<AppStore>();
 
@@ -30,7 +35,6 @@ export function Provider(props) {
   [packages, categories] = createArticles(agent, actions, state, setState);
 
   return (
-    /*@ts-ignore*/
     <StoreContext.Provider value={store}>
       {props.children}
     </StoreContext.Provider>
