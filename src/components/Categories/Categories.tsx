@@ -14,9 +14,11 @@ import { ChakraInput } from "@codiechanel/solid-lib-simple/Chakra";
 // import {categories, categoriesAction} from "../common/resource";
 import { TwButton } from "@codiechanel/solid-lib-simple/Tailwind";
 import { Modal } from "@codiechanel/solid-lib-simple/Mine";
+import { useStore } from "../../store";
 // import {createCategoryToDB} from "../common/api";
 
 export default function Categories(props) {
+  const [store, { createCategoryToDB }] = useStore();
   let [showModal, setShowModal] = createSignal(false);
   let [categoryName, setCategoryName] = createSignal("");
   let navigate = useNavigate();
@@ -42,11 +44,9 @@ export default function Categories(props) {
           <div className="mt-4">
             <TwButton
               onClick={() => {
-                /*     createCategoryToDB(categoryName()).then((res) => {
-                                let newArr = [...categories(), res];
-                                categoriesAction.mutate(newArr);
-                                setShowModal(false);
-                            });*/
+                createCategoryToDB(categoryName()).then((res) => {
+                  setShowModal(false);
+                });
               }}
             >
               Save

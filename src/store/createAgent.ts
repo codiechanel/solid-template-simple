@@ -38,6 +38,27 @@ let categoriesQuery = gql`
   }
 `;
 
+const createCategoryMutation = gql`
+  mutation MyMutation($name: String!) {
+    __typename
+    createCategory(data: { name: $name }) {
+      id
+      name
+    }
+  }
+`;
+
+let publishCategoryMutation = gql`
+  mutation MyMutation($id: ID!) {
+    __typename
+    publishCategory(where: { id: $id }) {
+      id
+      name
+      publishedAt
+    }
+  }
+`;
+
 export default function createAgent([state, actions]) {
   async function send(method, url, data?, resKey?, token?) {
     const headers = {},
@@ -77,12 +98,33 @@ export default function createAgent([state, actions]) {
       let queryVar = catId === "fetchAllCategories" ? null : { id: catId };
       return client.query(query, queryVar).toPromise();
     },
+    createCategoryToDB: async (name) => {
+      let res = await client
+        .mutation(createCategoryMutation, { name })
+        .toPromise();
+
+      let res2 = await client
+        .mutation(publishCategoryMutation, { id: res.data?.createCategory?.id })
+        .toPromise();
+
+      return res.data.createCategory;
+    },
   };
 
   return {
     Articles,
   };
 }
+
+/*export const createCategoryToDB = async (name) => {
+  let res = await client.mutation(createCategoryMutation, { name }).toPromise();
+
+  let res2 = await client
+      .mutation(publishCategoryMutation, { id: res.data?.createCategory?.id })
+      .toPromise();
+
+  return res.data.createCategory;
+};*/
 
 /*export const fetchPackagesFromDB = async (catId = "fetchAllCategories") => {
   let query =

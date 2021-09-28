@@ -38,6 +38,14 @@ export default function createArticles(agent, actions, state, setState) {
     loadCategories() {
       setCategoriesSource(["categories"]);
     },
+    createCategoryToDB(name) {
+      return agent.Articles.createCategoryToDB(name).then((res) => {
+        let newArr = [...categories(), res];
+        categoriesAction.mutate(newArr);
+        // console.log(x)
+        return res;
+      });
+    },
   });
 
   return [packages, categories];

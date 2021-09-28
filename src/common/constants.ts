@@ -6,4 +6,5 @@ export interface StoreState {
 export interface StoreActions {
   loadPackages?: Function;
   loadCategories?: Function;
+  createCategoryToDB?: Function;
 }
