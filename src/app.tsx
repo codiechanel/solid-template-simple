@@ -9,13 +9,13 @@ const App: Component = () => {
   const Route = useRoutes(routes);
 
   return (
-    <>
-     <MyNav/>
+    <div class="flex flex-col  min-h-full ">
+      <MyNav />
+      <div class="bg-primary-3 h-[4px] " />
 
-      <main>
-        <Route />
-      </main>
-    </>
+      {/*    <main>*/}
+      <Route />
+    </div>
   );
 };
 

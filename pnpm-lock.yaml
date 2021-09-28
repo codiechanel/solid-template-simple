@@ -1,8 +1,11 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@codiechanel/solid-lib-simple': ^0.3.99
+  '@urql/core': ^2.3.3
   date-fns: ^2.24.0
   debug: ^4.3.2
+  graphql: ^15.6.0
   prettier: ^2.4.1
   solid-app-router: ^0.1.5
   solid-icons: ^0.3.0
@@ -15,6 +18,8 @@ specifiers:
   vite-plugin-windicss: ^1.3.0
 
 dependencies:
+  '@codiechanel/solid-lib-simple': 0.3.99_solid-js@1.1.1
+  '@urql/core': 2.3.3_graphql@15.6.0
   date-fns: 2.24.0
   debug: 4.3.2
   solid-app-router: 0.1.5_solid-js@1.1.1
@@ -24,6 +29,7 @@ dependencies:
   twind: 0.16.16
 
 devDependencies:
+  graphql: 15.6.0
   prettier: 2.4.1
   tailwindcss: 2.2.15
   vite: 2.5.1
@@ -328,6 +334,26 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
+  /@codiechanel/solid-lib-simple/0.3.99_solid-js@1.1.1:
+    resolution: {integrity: sha512-xGNOVJ7rVLtnrPxzAgrukZzoLIqPMI879UZT47mKnJnEh+z7UZuN0FyAJlHx/Jl/BLuYChlsA9M/v+9EdqDF8Q==}
+    peerDependencies:
+      goober: ^2.0.41
+      solid-js: ^1.0.0
+    dependencies:
+      postcss: 8.3.8
+      solid-icons: 0.3.2_solid-js@1.1.1
+      solid-js: 1.1.1
+      solid-styled-components: 0.27.3_solid-js@1.1.1
+    dev: false
+
+  /@graphql-typed-document-node/core/3.1.0_graphql@15.6.0:
+    resolution: {integrity: sha512-wYn6r8zVZyQJ6rQaALBEln5B1pzxb9shV5Ef97kTvn6yVGrqyXVnDqnU24MXnFubR+rZjBY9NWuxX3FB2sTsjg==}
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
+    dependencies:
+      graphql: 15.6.0
+    dev: false
+
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -356,6 +382,16 @@ packages:
   /@types/throttle-debounce/2.1.0:
     resolution: {integrity: sha512-5eQEtSCoESnh2FsiLTxE121IiE60hnMqcb435fShf4bpLRjEu1Eoekht23y6zXS9Ts3l+Szu3TARnTsA0GkOkQ==}
     dev: true
+
+  /@urql/core/2.3.3_graphql@15.6.0:
+    resolution: {integrity: sha512-Bi9mafTFu0O1XZmI7/HrEk12LHZW+Fs/V1FqSJoUDgYIhARIJW6cCh3Havy1dJJ0FETxYmmQQXPf6kst+IP2qQ==}
+    peerDependencies:
+      graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0
+    dependencies:
+      '@graphql-typed-document-node/core': 3.1.0_graphql@15.6.0
+      graphql: 15.6.0
+      wonka: 4.0.15
+    dev: false
 
   /@windicss/config/1.3.0:
     resolution: {integrity: sha512-/F2dg9ltkoQLA4cpr4YQP4V+Y1hO0WOF8jtHoErCKKBr1wBnFLieRjhsXcolM5ZbqH7wLoUrPkdBkIFlocDblg==}
@@ -879,6 +915,11 @@ packages:
     resolution: {integrity: sha512-qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==}
     dev: true
 
+  /graphql/15.6.0:
+    resolution: {integrity: sha512-WJR872Zlc9hckiEPhXgyUftXH48jp2EjO5tgBBOyNMRJZ9fviL2mJBD6CAysk6N5S0r9BTs09Qk39nnJBkvOXQ==}
+    engines: {node: '>= 10.x'}
+    dev: true
+
   /has-flag/3.0.0:
     resolution: {integrity: sha1-tdRU3CGZriJWmfNGfloH87lVuv0=}
     engines: {node: '>=4'}
@@ -1145,11 +1186,14 @@ packages:
       thenify-all: 1.6.0
     dev: true
 
+  /nanocolors/0.2.11:
+    resolution: {integrity: sha512-83ttyvfJj66dKMadWfBkEUOEDFfRc8FpzTJvh1MySR/pzWFmFikTQZGOV6kHZRz7yR/heiQ1y/MHBBN5P/e7WQ==}
+    dev: false
+
   /nanoid/3.1.25:
     resolution: {integrity: sha512-rdwtIXaXCLFAQbnfqDRnI6jaRHp9fTcYBjtFKE8eezcZ7LuLjhUaQGNeMXf1HmRoCH32CLz6XwX0TtxEOS/A3Q==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
-    dev: true
 
   /node-emoji/1.11.0:
     resolution: {integrity: sha512-wo2DpQkQp7Sjm2A0cq+sN7EHKO6Sl0ctXeBdFZrL9T9+UywORbufTcTZxom8YqpLQt/FqNMUkOpkZrJVYSKD3A==}
@@ -1305,6 +1349,15 @@ packages:
       source-map-js: 0.6.2
     dev: true
 
+  /postcss/8.3.8:
+    resolution: {integrity: sha512-GT5bTjjZnwDifajzczOC+r3FI3Cu+PgPvrsjhQdRqa2kTJ4968/X9CUce9xttIB0xOs5c6xf0TCWZo/y9lF6bA==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanocolors: 0.2.11
+      nanoid: 3.1.25
+      source-map-js: 0.6.2
+    dev: false
+
   /prettier/2.4.1:
     resolution: {integrity: sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==}
     engines: {node: '>=10.13.0'}
@@ -1452,6 +1505,14 @@ packages:
       solid-js: 1.1.1
     dev: false
 
+  /solid-icons/0.3.2_solid-js@1.1.1:
+    resolution: {integrity: sha512-pS5HkaI0nVLxAXQ+JVIz9hIJy4COO+3dLptP+3ifHoX1FvTU//3E8/G0PQjUCIHrscgqantGtmazGKWjsnNE3Q==}
+    peerDependencies:
+      solid-js: '*'
+    dependencies:
+      solid-js: 1.1.1
+    dev: false
+
   /solid-js/1.1.1:
     resolution: {integrity: sha512-BtNNMUjBGtkx4viW5q/oqU4DOHa3WRhylN302cVVIeiBUGw6uzAE+NhNF12bAvSYJOCHLyGHpUEIeWklkeGgsg==}
 
@@ -1476,7 +1537,6 @@ packages:
   /source-map-js/0.6.2:
     resolution: {integrity: sha512-/3GptzWzu0+0MBQFrDKzw/DvvMTUORvgY6k6jd/VS6iCR4RDTKWH6v6WPwQoUO8667uQEf9Oe38DxAYWY5F/Ug==}
     engines: {node: '>=0.10.0'}
-    dev: true
 
   /source-map/0.5.7:
     resolution: {integrity: sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=}
@@ -1718,6 +1778,10 @@ packages:
     engines: {node: '>= 12'}
     hasBin: true
     dev: true
+
+  /wonka/4.0.15:
+    resolution: {integrity: sha512-U0IUQHKXXn6PFo9nqsHphVCE5m3IntqZNB9Jjn7EB1lrR7YTDY3YWgFvEvwniTzXSvOH/XMzAZaIfJF/LvHYXg==}
+    dev: false
 
   /wrappy/1.0.2:
     resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=}

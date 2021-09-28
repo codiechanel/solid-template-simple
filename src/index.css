@@ -1,4 +1,7 @@
-html {
+/* these 3 needs to be 100
+if we remove one of these, it wont work
+*/
+html, body, #root {
     height: 100%;
 }
 

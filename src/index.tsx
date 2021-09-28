@@ -6,7 +6,8 @@ import "./index.css";
 import "./one-dark.css";
 
 import { setup, strict, voidSheet } from "twind";
-import * as colors from "twind/colors"; // Tailwind V2 colors
+import * as colors from "twind/colors";
+import { Provider } from "./store"; // Tailwind V2 colors
 
 setup({
   theme: {
@@ -22,7 +23,9 @@ setup({
 render(
   () => (
     <Router>
-      <App />
+      <Provider>
+        <App />
+      </Provider>
     </Router>
   ),
   document.getElementById("root")
