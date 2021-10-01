@@ -8,6 +8,7 @@ specifiers:
   debug: ^4.3.2
   graphql: ^15.6.0
   prettier: ^2.4.1
+  rollup-plugin-analyzer: ^4.0.0
   solid-app-router: ^0.1.5
   solid-icons: ^0.3.0
   solid-js: ^1.1.1
@@ -33,6 +34,7 @@ dependencies:
 devDependencies:
   graphql: 15.6.0
   prettier: 2.4.1
+  rollup-plugin-analyzer: 4.0.0
   tailwindcss: 2.2.15
   vite: 2.5.1
   vite-plugin-solid: 2.0.3
@@ -1443,6 +1445,11 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.1.6
+    dev: true
+
+  /rollup-plugin-analyzer/4.0.0:
+    resolution: {integrity: sha512-LL9GEt3bkXp6Wa19SNR5MWcvHNMvuTFYg+eYBZN2OIFhSWN+pEJUQXEKu5BsOeABob3x9PDaLKW7w5iOJnsESQ==}
+    engines: {node: '>=8.0.0'}
     dev: true
 
   /rollup/2.56.3:

@@ -1,9 +1,8 @@
 import { defineConfig } from "vite";
 import solidPlugin from "vite-plugin-solid";
-// import WindiCSS from "vite-plugin-windicss";
-
+import analyze from "rollup-plugin-analyzer";
 export default defineConfig({
-  plugins: [solidPlugin(),],
+  plugins: [solidPlugin(), analyze({ summaryOnly: true })],
   build: {
     target: "esnext",
     polyfillDynamicImport: false,
