@@ -13,7 +13,9 @@ export default function index() {
   });
 
   createComputed(() => {
-    loadPackages(catId());
+    queueMicrotask(() => {
+      loadPackages(catId());
+    });
   });
 
   return <Packages packages={store.packages} />;
