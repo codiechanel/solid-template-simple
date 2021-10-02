@@ -18,7 +18,6 @@
     "vite-plugin-windicss": "^1.3.0"
   },
   "dependencies": {
-    "@codiechanel/solid-lib-simple": "^0.3.99",
     "@codiechanel/solid-library": "^0.0.16",
     "@ungap/event-target": "^0.2.3",
     "@urql/core": "^2.3.3",

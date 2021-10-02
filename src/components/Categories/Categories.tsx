@@ -2,9 +2,9 @@ import { HiSolidPlusCircle } from "solid-icons/hi";
 import { createSignal, For, Suspense } from "solid-js";
 
 import { useNavigate } from "solid-app-router";
-import { ChakraInput } from "@codiechanel/solid-lib-simple/Chakra";
-import { TwButton } from "@codiechanel/solid-lib-simple/Tailwind";
-import { Modal } from "@codiechanel/solid-lib-simple/Mine";
+import { ChakraInput } from "@codiechanel/solid-library/chakra";
+import { TwButton } from "@codiechanel/solid-library/tailwind";
+import { Modal } from "@codiechanel/solid-library/mine";
 import { useStore } from "../../store";
 import { useMediaQuery } from "@codiechanel/solid-library/hooks";
 
