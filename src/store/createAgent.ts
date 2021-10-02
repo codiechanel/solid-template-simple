@@ -60,42 +60,10 @@ let publishCategoryMutation = gql`
 `;
 
 export default function createAgent([state, actions]) {
-  async function send(method, url, data?, resKey?, token?) {
-    const headers = {},
-      opts = { method, headers };
-
-    if (data !== undefined) {
-      headers["Content-Type"] = "application/json";
-      // @ts-ignore
-      opts.body = JSON.stringify(data);
-    }
-
-    // if (state.token) headers["Authorization"] = `Token ${state.token}`;
-    headers["Authorization"] = `Token ${token}`;
-
-    try {
-      const response = await fetch(API_ROOT + url, opts);
-      const json = await response.json();
-      return resKey ? json[resKey] : json;
-    } catch (err) {
-      if (err && err.response && err.response.status === 401) {
-        /* client unauthorized or token expired, logout and show login page */
-        // actions.logout();
-      }
-      return err;
-    }
-  }
-
   const Articles = {
     fetchCategoriesFromDB: () => client.query(categoriesQuery).toPromise(),
 
-    fetchPackagesFromDB: (catId = "fetchAllCategories") => {
-      console.log("fetchPackagesFromDB");
-      /*let query =
-        catId === "fetchAllCategories"
-          ? packagesQuery
-          : packagesByCategoryQuery;*/
-
+    fetchPackagesFromDB: (catId) => {
       let query = catId ? packagesByCategoryQuery : packagesQuery;
 
       let queryVar = catId ? { id: catId } : null;

@@ -60,9 +60,9 @@ export default function Categories(props) {
         <div
           class="hover:bg-gray-700  px-4 py-2 rounded cursor-pointer"
           onClick={() => {
-            /*  if (!x()) {
+            if (!x()) {
               toggleDrawer();
-            }*/
+            }
             navigate(`/category`, { replace: true });
           }}
         >
@@ -81,12 +81,10 @@ export default function Categories(props) {
               <div
                 class="hover:bg-gray-700  px-4 py-2 rounded cursor-pointer"
                 onClick={() => {
-                  console.log("cl");
-                  /*      if (!x()) {
-                      toggleDrawer();
-                    }*/
-                  let path = `/category/${item.id}`;
-                  console.log("path", path);
+                  if (!x()) {
+                    toggleDrawer();
+                  }
+
                   navigate(`/category/${item.id}`, { replace: true });
                 }}
               >

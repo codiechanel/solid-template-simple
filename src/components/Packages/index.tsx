@@ -10,7 +10,6 @@ export default function index() {
   let packages = () => store.packages;
 
   const catId = createMemo(() => {
-    console.log("createMemo");
     let { catId } = useParams();
     return catId;
   });
@@ -22,7 +21,6 @@ export default function index() {
 
   createComputed(() => {
     let cId = catId();
-    console.log(cId);
     queueMicrotask(() => {
       loadPackages(cId);
     });

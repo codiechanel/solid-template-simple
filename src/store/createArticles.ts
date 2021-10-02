@@ -24,7 +24,6 @@ export default function createArticles(agent, actions, state, setState) {
     packagesSource,
     (args: string[]) =>
       agent.Articles.fetchPackagesFromDB(args[1]).then((res) => {
-        console.log("fetchPackagesFromDB", res);
         return res?.data?.packages;
       }),
     {
@@ -44,7 +43,6 @@ export default function createArticles(agent, actions, state, setState) {
       return agent.Articles.createCategoryToDB(name).then((res) => {
         let newArr = [...categories(), res];
         categoriesAction.mutate(newArr);
-        // console.log(x)
         return res;
       });
     },

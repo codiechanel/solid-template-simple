@@ -1,10 +1,11 @@
 import { For, Suspense } from "solid-js";
 import { RippleLoader } from "@codiechanel/solid-library/mine";
 import { useStore } from "../../store";
+import Flex from "../Flex";
 export default function PackagesInner() {
   const [store, { loadPackages }] = useStore();
   return (
-    <div class={"flex flex-col p-4  flex-1 h-full"}>
+    <Flex.ColumnFull className={" p-4   h-full"}>
       <Suspense fallback={<RippleLoader />}>
         <For each={store.packages}>
           {(item: any) => {
@@ -22,6 +23,6 @@ export default function PackagesInner() {
           }}
         </For>
       </Suspense>
-    </div>
+    </Flex.ColumnFull>
   );
 }
