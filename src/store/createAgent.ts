@@ -90,12 +90,15 @@ export default function createAgent([state, actions]) {
     fetchCategoriesFromDB: () => client.query(categoriesQuery).toPromise(),
 
     fetchPackagesFromDB: (catId = "fetchAllCategories") => {
-      let query =
+      console.log("fetchPackagesFromDB");
+      /*let query =
         catId === "fetchAllCategories"
           ? packagesQuery
-          : packagesByCategoryQuery;
+          : packagesByCategoryQuery;*/
 
-      let queryVar = catId === "fetchAllCategories" ? null : { id: catId };
+      let query = catId ? packagesByCategoryQuery : packagesQuery;
+
+      let queryVar = catId ? { id: catId } : null;
       return client.query(query, queryVar).toPromise();
     },
     createCategoryToDB: async (name) => {

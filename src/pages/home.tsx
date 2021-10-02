@@ -1,13 +1,13 @@
 import Categories from "../components/Categories";
-import Packages from "../components/Packages";
 import { useMediaQuery } from "@codiechanel/solid-library/hooks";
 import { useStore } from "../store";
+import { Outlet } from "solid-app-router";
 export default function Home() {
   let x = useMediaQuery("(min-width: 400px)");
   const [store] = useStore();
   return (
     <>
-      <section class="text-gray-500 flex bg-yellow-500 flex-1">
+      <section class="text-gray-500 flex flex-1">
         <div
           class="flex-1 max-w-sm bg-primary-1"
           classList={{ hidden: store.drawerHidden }}
@@ -19,8 +19,9 @@ export default function Home() {
           classList={{ hidden: !x() && !store.drawerHidden }}
         >
           <div class="max-w-lg p-4 relative  flex-1 ">
-            <div class="absolute inset-0 overflow-auto">
-              <Packages />
+            <div class="absolute inset-0 overflow-auto ">
+              {/*<Packages />*/}
+              <Outlet />
             </div>
           </div>
         </div>

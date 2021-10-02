@@ -24,6 +24,7 @@ export default function createArticles(agent, actions, state, setState) {
     packagesSource,
     (args: string[]) =>
       agent.Articles.fetchPackagesFromDB(args[1]).then((res) => {
+        console.log("fetchPackagesFromDB", res);
         return res?.data?.packages;
       }),
     {

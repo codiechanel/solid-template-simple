@@ -60,39 +60,41 @@ export default function Categories(props) {
         <div
           class="hover:bg-gray-700  px-4 py-2 rounded cursor-pointer"
           onClick={() => {
-            if (!x()) {
+            /*  if (!x()) {
               toggleDrawer();
-            }
-            navigate(`/`, { replace: true });
+            }*/
+            navigate(`/category`, { replace: true });
           }}
         >
           All
         </div>
 
-        <Suspense
+        {/*     <Suspense
           fallback={
             <div class="article-preview text-red-500">Loading articles...</div>
           }
-        >
-          <For each={props.categories}>
-            {(item: any) => {
-              return (
-                /*    <Link href={`/?catId=${item.id}`}>*/
-                <div
-                  class="hover:bg-gray-700  px-4 py-2 rounded cursor-pointer"
-                  onClick={() => {
-                    if (!x()) {
+        >*/}
+        <For each={props.categories}>
+          {(item: any) => {
+            return (
+              /*    <Link href={`/?catId=${item.id}`}>*/
+              <div
+                class="hover:bg-gray-700  px-4 py-2 rounded cursor-pointer"
+                onClick={() => {
+                  console.log("cl");
+                  /*      if (!x()) {
                       toggleDrawer();
-                    }
-                    navigate(`/?catId=${item.id}`, { replace: true });
-                  }}
-                >
-                  {item.name}
-                </div>
-              );
-            }}
-          </For>
-        </Suspense>
+                    }*/
+                  let path = `/category/${item.id}`;
+                  console.log("path", path);
+                  navigate(`/category/${item.id}`, { replace: true });
+                }}
+              >
+                {item.name}
+              </div>
+            );
+          }}
+        </For>
 
         {/*     <div class="hover:bg-gray-700  px-4 py-2 rounded cursor-pointer">
             solidjs
