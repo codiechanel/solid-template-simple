@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@codiechanel/solid-lib-simple": "^0.3.99",
+    "@codiechanel/solid-library": "^0.0.16",
     "@ungap/event-target": "^0.2.3",
     "@urql/core": "^2.3.3",
     "date-fns": "^2.24.0",

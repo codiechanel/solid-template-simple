@@ -1,7 +1,9 @@
 // import MenuIcon from "../heroicons/solid/menu.svg";
 import { HiSolidMenu, HiSolidBell } from "solid-icons/hi";
-import { tw } from "twind";
+import { useStore } from "../store";
+
 export default function MyNav() {
+  const [store, { toggleDrawer }] = useStore();
   return (
     /*main disclosure*/
     <div class="bg-primary-1">
@@ -9,27 +11,23 @@ export default function MyNav() {
         <div class="relative flex items-center justify-between h-12 md:h-16">
           {/*x buttton sm:hidden */}
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <button class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <button
+              onClick={() => {
+                toggleDrawer();
+              }}
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            >
               <HiSolidMenu className="h-6 w-6" />
-              {/*<svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>*/}
             </button>
           </div>
           {/*for the icon and text menu */}
           <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="flex-shrink-0 flex items-center">
+            <div
+              onClick={() => {
+                toggleDrawer();
+              }}
+              class="flex-shrink-0 flex items-center"
+            >
               <img
                 class="block lg:hidden h-6 w-auto"
                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"

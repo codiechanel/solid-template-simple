@@ -17,7 +17,7 @@ interface AppStore extends Array<StoreState | StoreActions> {
 const StoreContext = createContext<AppStore>();
 
 export function Provider(props) {
-  let packages, categories;
+  let packages, categories, drawerHidden;
 
   const [state, setState] = createStore({
     get packages() {
@@ -26,13 +26,21 @@ export function Provider(props) {
     get categories() {
       return categories?.();
     },
+    get drawerHidden() {
+      return drawerHidden?.();
+    },
   });
 
   let actions: StoreActions = {},
     store = [state, actions],
     // @ts-ignore
     agent = createAgent(store);
-  [packages, categories] = createArticles(agent, actions, state, setState);
+  [packages, categories, drawerHidden] = createArticles(
+    agent,
+    actions,
+    state,
+    setState
+  );
 
   return (
     <StoreContext.Provider value={store}>

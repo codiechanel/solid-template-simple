@@ -6,9 +6,11 @@ import { ChakraInput } from "@codiechanel/solid-lib-simple/Chakra";
 import { TwButton } from "@codiechanel/solid-lib-simple/Tailwind";
 import { Modal } from "@codiechanel/solid-lib-simple/Mine";
 import { useStore } from "../../store";
+import { useMediaQuery } from "@codiechanel/solid-library/hooks";
 
 export default function Categories(props) {
-  const [store, { createCategoryToDB }] = useStore();
+  const [store, { createCategoryToDB, toggleDrawer }] = useStore();
+  let x = useMediaQuery("(min-width: 400px)");
   let [showModal, setShowModal] = createSignal(false);
   let [categoryName, setCategoryName] = createSignal("");
   let navigate = useNavigate();
@@ -58,6 +60,9 @@ export default function Categories(props) {
         <div
           class="hover:bg-gray-700  px-4 py-2 rounded cursor-pointer"
           onClick={() => {
+            if (!x()) {
+              toggleDrawer();
+            }
             navigate(`/`, { replace: true });
           }}
         >
@@ -76,6 +81,9 @@ export default function Categories(props) {
                 <div
                   class="hover:bg-gray-700  px-4 py-2 rounded cursor-pointer"
                   onClick={() => {
+                    if (!x()) {
+                      toggleDrawer();
+                    }
                     navigate(`/?catId=${item.id}`, { replace: true });
                   }}
                 >

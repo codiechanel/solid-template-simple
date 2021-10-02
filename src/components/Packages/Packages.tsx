@@ -2,7 +2,7 @@ import { For, Suspense } from "solid-js";
 
 export default function Packages(props) {
   return (
-    <div>
+    <div class={"p-8"}>
       <Suspense
         fallback={
           <div class="article-preview text-red-500">Loading articles...</div>

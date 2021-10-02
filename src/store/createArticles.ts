@@ -5,6 +5,7 @@ const LIMIT = 10;
 export default function createArticles(agent, actions, state, setState) {
   const [packagesSource, setPackagesSource] = createSignal();
   const [categoriesSource, setCategoriesSource] = createSignal();
+  const [drawerHidden, setDrawerHidden] = createSignal(false);
 
   const [categories, categoriesAction] = createResource(
     categoriesSource,
@@ -46,7 +47,12 @@ export default function createArticles(agent, actions, state, setState) {
         return res;
       });
     },
+    toggleDrawer() {
+      setDrawerHidden((e) => {
+        return !e;
+      });
+    },
   });
 
-  return [packages, categories];
+  return [packages, categories, drawerHidden];
 }
