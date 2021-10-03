@@ -1,8 +1,9 @@
 import Categories from "../components/Categories";
 import { useMediaQuery } from "@codiechanel/solid-library/hooks";
+import { Flex, Scrollable } from "@codiechanel/solid-library/mine";
 import { useStore } from "../store";
 import { Outlet } from "solid-app-router";
-import Flex from "../components/Flex";
+
 export default function Home() {
   let x = useMediaQuery("(min-width: 400px)");
   const [store] = useStore();
@@ -20,10 +21,10 @@ export default function Home() {
           classList={{ hidden: !x() && !store.drawerHidden }}
         >
           <div class="max-w-lg p-4 relative  flex-1 ">
-            <div class="absolute inset-0 overflow-auto ">
+            <Scrollable>
               {/*<Packages />*/}
               <Outlet />
-            </div>
+            </Scrollable>
           </div>
         </Flex.RowFull>
       </Flex.RowFull>

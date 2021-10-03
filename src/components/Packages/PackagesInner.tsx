@@ -1,7 +1,7 @@
 import { For, Suspense } from "solid-js";
-import { RippleLoader } from "@codiechanel/solid-library/mine";
+import { RippleLoader, Flex } from "@codiechanel/solid-library/mine";
 import { useStore } from "../../store";
-import Flex from "../Flex";
+// import Flex from "../Flex";
 export default function PackagesInner() {
   const [store, { loadPackages }] = useStore();
   return (

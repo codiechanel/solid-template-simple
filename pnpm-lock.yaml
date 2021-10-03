@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@codiechanel/solid-library': ^0.0.20
+  '@codiechanel/solid-library': ^0.0.22
   '@ungap/event-target': ^0.2.3
   '@urql/core': ^2.3.3
   date-fns: ^2.24.0
@@ -20,7 +20,7 @@ specifiers:
   vite-plugin-windicss: ^1.3.0
 
 dependencies:
-  '@codiechanel/solid-library': 0.0.20_solid-js@1.1.1
+  '@codiechanel/solid-library': 0.0.22_solid-js@1.1.1
   '@ungap/event-target': 0.2.3
   '@urql/core': 2.3.3_graphql@15.6.0
   date-fns: 2.24.0
@@ -338,8 +338,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@codiechanel/solid-library/0.0.20_solid-js@1.1.1:
-    resolution: {integrity: sha512-ATyDg/Hu10JmABSqhgik5isOspwW4fPWgFz/6rnkSbfx0BX1SXWPQybrR7X0Y9b4Eg4szMWqmXAvfMYyWWp0HA==}
+  /@codiechanel/solid-library/0.0.22_solid-js@1.1.1:
+    resolution: {integrity: sha512-Hb2te/Geasxghd2KPsXTUgxCuPC5EaZ/rMUMRlrTzwtT+A3X6gVIctBmyUSdwCQFmGqKzFgXeBdy3y7o1HYtCA==}
     peerDependencies:
       goober: ^2.0.41
       solid-js: ^1.0.0

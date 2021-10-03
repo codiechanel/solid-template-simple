@@ -1,17 +1,12 @@
 import type { Component } from "solid-js";
-import { useLocation } from "solid-app-router";
+import { Route, Routes } from "solid-app-router";
 
 import MyNav from "./components/MyNav";
-// import Flex from "./components/Flex";
-import { Route, Routes } from "solid-app-router";
+import { Flex } from "@codiechanel/solid-library/mine";
 import Home from "./pages/home";
 import Packages from "./components/Packages";
-import Flex from "./components/Flex";
 
 const App: Component = () => {
-  const location = useLocation();
-  // const Route = useRoutes(routes);
-
   return (
     <Flex.Column className=" min-h-full ">
       <MyNav />
