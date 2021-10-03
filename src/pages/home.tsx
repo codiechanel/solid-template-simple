@@ -20,7 +20,7 @@ export default function Home() {
           className="bg-primary-2 "
           classList={{ hidden: !x() && !store.drawerHidden }}
         >
-          <div class="max-w-lg p-4 relative  flex-1 ">
+          <div class=" p-4 relative  flex-1 ">
             <Scrollable>
               {/*<Packages />*/}
               <Outlet />
