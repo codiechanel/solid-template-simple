@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@codiechanel/solid-library': ^0.0.22
+  '@codiechanel/solid-library': ^0.0.24
   '@ungap/event-target': ^0.2.3
   '@urql/core': ^2.3.3
   date-fns: ^2.24.0
@@ -10,6 +10,7 @@ specifiers:
   prettier: ^2.4.1
   rollup-plugin-analyzer: ^4.0.0
   solid-app-router: ^0.1.5
+  solid-headless: ^0.8.0
   solid-icons: ^0.3.0
   solid-js: ^1.1.1
   solid-styled-components: ^0.27.3
@@ -20,12 +21,13 @@ specifiers:
   vite-plugin-windicss: ^1.3.0
 
 dependencies:
-  '@codiechanel/solid-library': 0.0.22_solid-js@1.1.1
+  '@codiechanel/solid-library': 0.0.24_solid-js@1.1.1
   '@ungap/event-target': 0.2.3
   '@urql/core': 2.3.3_graphql@15.6.0
   date-fns: 2.24.0
   debug: 4.3.2
   solid-app-router: 0.1.5_solid-js@1.1.1
+  solid-headless: 0.8.0_solid-js@1.1.1
   solid-icons: 0.3.0_solid-js@1.1.1
   solid-js: 1.1.1
   solid-styled-components: 0.27.3_solid-js@1.1.1
@@ -338,8 +340,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@codiechanel/solid-library/0.0.22_solid-js@1.1.1:
-    resolution: {integrity: sha512-Hb2te/Geasxghd2KPsXTUgxCuPC5EaZ/rMUMRlrTzwtT+A3X6gVIctBmyUSdwCQFmGqKzFgXeBdy3y7o1HYtCA==}
+  /@codiechanel/solid-library/0.0.24_solid-js@1.1.1:
+    resolution: {integrity: sha512-Zhgr5bB4B8BwMDgQ0M2A18EdaSYKa5Rqh61RrUQH59xVHrNHJcyqsO+Sb0CH19kyJUtCc69GbfBJcqOWjcKKCg==}
     peerDependencies:
       goober: ^2.0.41
       solid-js: ^1.0.0
@@ -1494,6 +1496,15 @@ packages:
     resolution: {integrity: sha512-8wxpBP1pOea4rQFba1NH6uyPFBvqcSxHB4i9dSuoQw5OABgecvrFfAe+0TbYCP/7OhJ9RcEfsej+LBEdE/YS0Q==}
     peerDependencies:
       solid-js: ^1.0.0
+    dependencies:
+      solid-js: 1.1.1
+    dev: false
+
+  /solid-headless/0.8.0_solid-js@1.1.1:
+    resolution: {integrity: sha512-aL/auct3K6C3dvWpBkjtKBC4hqj8WVLZOhCaQvJ/+/csIQhVKEnun8gFWv6Fd4EVdg56FVba8G0LHgiR+9jSSw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      solid-js: ^1.1.1
     dependencies:
       solid-js: 1.1.1
     dev: false

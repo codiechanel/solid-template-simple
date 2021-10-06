@@ -8,7 +8,7 @@ import Packages from "./components/Packages";
 
 const App: Component = () => {
   return (
-    <Flex.Column className=" min-h-full ">
+    <Flex.Column className=" min-h-full bg-primary-1">
       <MyNav />
       <div class="bg-primary-3 h-[4px] " />
 
