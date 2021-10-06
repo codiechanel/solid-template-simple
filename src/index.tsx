@@ -3,14 +3,17 @@ import { Router } from "solid-app-router";
 import App from "./app";
 // @ts-ignore
 // import { setup } from "https://cdn.skypack.dev/twind/shim";
-import { setup, disconnect } from "twind/shim";
+// import { setup, disconnect } from "twind/shim";
 import { Provider } from "./store"; // Tailwind V2 colors
-import "./index.css";
-import "./one-dark.css";
 
+import "./one-dark.css";
+import "./index.css";
+
+/*
 setup({
   mode: "silent",
 });
+*/
 
 render(
   () => (

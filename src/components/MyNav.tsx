@@ -1,6 +1,7 @@
 // import MenuIcon from "../heroicons/solid/menu.svg";
 import { HiSolidMenu, HiSolidBell } from "solid-icons/hi";
 import { useStore } from "../store";
+import { TwButton } from "@codiechanel/solid-library/tailwind";
 
 export default function MyNav() {
   const [store, { toggleDrawer }] = useStore();
@@ -52,6 +53,26 @@ export default function MyNav() {
                   {" "}
                   Projects{" "}
                 </a>
+                <TwButton
+                  onClick={() => {
+                    let theme = "one-dark";
+                    document.documentElement.setAttribute("data-theme", theme);
+
+                    localStorage.setItem("theme", theme);
+                  }}
+                >
+                  Dark
+                </TwButton>
+                <TwButton
+                  onClick={() => {
+                    let theme = "pink";
+                    document.documentElement.setAttribute("data-theme", theme);
+
+                    localStorage.setItem("theme", theme);
+                  }}
+                >
+                  Pink
+                </TwButton>
               </div>
             </div>
           </div>{" "}

@@ -1,4 +1,4 @@
-:root {
+/*:root {
     --primary-1: #21252b;
     --primary-2: #282c34;
     --primary-3: #323844;
@@ -14,4 +14,24 @@
 
 .bg-primary-3 {
     background-color: var(--primary-3);
+}*/
+
+:root, [data-theme='one-dark'] {
+    --color-bg-primary-1: #21252b;
+    --color-bg-primary-2: #282c34;
+    --color-bg-primary-3: #323844;
+
+    --color-text-primary-1: rgb(107, 114, 128);
+    --color-text-primary-2: white;
 }
+
+[data-theme='pink'] {
+    --my-color: #000;
+    --color-bg-primary-1: #671c60;
+    --color-bg-primary-2: #282c34;
+    --color-bg-primary-3: #323844;
+
+    --color-text-primary-1: rgb(107, 114, 128);
+    --color-text-primary-2: white;
+}
+
