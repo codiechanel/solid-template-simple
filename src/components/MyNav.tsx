@@ -65,7 +65,7 @@ export default function MyNav() {
                   Dark
                 </TwButton>
                 <TwButton
-                  className="!bg-primary-3 !text-white"
+                  className="!bg-accent-1 !text-white"
                   onClick={() => {
                     let theme = "deck-ui";
                     document.documentElement.setAttribute("data-theme", theme);
