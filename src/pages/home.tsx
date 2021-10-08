@@ -6,13 +6,15 @@ import { Outlet } from "solid-app-router";
 import { Transition } from "solid-headless";
 export const transitionTemplate = {
   enter: "transform transition duration-[400ms]",
-  // rotate-[-120deg]
-  enterFrom: "opacity-0 scale-50",
-  // rotate-0
-  enterTo: "opacity-100  scale-100",
+  // rotate-[-120deg] scale-50
+  enterFrom: "opacity-0 ",
+  // rotate-0 scale-100
+  enterTo: "opacity-100  ",
   leave: "transform duration-400 transition delay-[200ms] ease-in-out",
-  leaveFrom: "opacity-100 rotate-0 scale-100 ",
-  leaveTo: "opacity-0 scale-95 ",
+  // rotate-0 scale-100
+  leaveFrom: "opacity-100  ",
+  // scale-95
+  leaveTo: "opacity-0  ",
 };
 
 /*export const transitionTemplate = {

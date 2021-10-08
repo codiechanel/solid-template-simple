@@ -5,10 +5,18 @@ import MyNav from "./components/MyNav";
 import { Flex } from "@codiechanel/solid-library/mine";
 import Home from "./pages/home";
 import Packages from "./components/Packages";
+import { createEffect } from "solid-js";
 
 const App: Component = () => {
+  createEffect(() => {
+    // themeChange(false);
+    let theme = localStorage.getItem("theme");
+    if (theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+    }
+  });
   return (
-    <Flex.Column className=" min-h-full bg-primary-1">
+    <Flex.Column className=" min-h-full bg-primary-1 ">
       <MyNav />
       <div class="bg-primary-3 h-[4px] " />
 

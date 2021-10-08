@@ -54,6 +54,7 @@ export default function MyNav() {
                   Projects{" "}
                 </a>
                 <TwButton
+                  className="!bg-primary-3 !text-white"
                   onClick={() => {
                     let theme = "one-dark";
                     document.documentElement.setAttribute("data-theme", theme);
@@ -64,14 +65,15 @@ export default function MyNav() {
                   Dark
                 </TwButton>
                 <TwButton
+                  className="!bg-primary-3 !text-white"
                   onClick={() => {
-                    let theme = "pink";
+                    let theme = "deck-ui";
                     document.documentElement.setAttribute("data-theme", theme);
 
                     localStorage.setItem("theme", theme);
                   }}
                 >
-                  Pink
+                  Deck UI
                 </TwButton>
               </div>
             </div>

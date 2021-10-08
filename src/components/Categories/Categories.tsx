@@ -15,7 +15,7 @@ export default function Categories(props) {
   let [categoryName, setCategoryName] = createSignal("");
   let navigate = useNavigate();
   return (
-    <div class="p-8">
+    <div class="p-8 text-primary-1">
       <Modal
         show={showModal}
         innerClassName="bg-gray-800"
@@ -24,9 +24,7 @@ export default function Categories(props) {
         }}
       >
         <div>
-          <h3 class="text-lg font-medium leading-6 text-gray-300 mb-4">
-            Create category
-          </h3>
+          <h3 class="text-lg font-medium leading-6  mb-4">Create category</h3>
           <ChakraInput
             placeholder="please enter a name"
             onInput={(e) => {
@@ -47,9 +45,9 @@ export default function Categories(props) {
         </div>
       </Modal>
       <div class="flex items-center justify-between mb-4 ">
-        <span class="text-2xl font-bold text-gray-400">Categories</span>
+        <span class="text-2xl font-bold text-primary-2">Categories</span>
         <HiSolidPlusCircle
-          className="h-6 w-6"
+          className="h-6 w-6 text-accent-1 "
           onClick={() => {
             setShowModal(true);
           }}

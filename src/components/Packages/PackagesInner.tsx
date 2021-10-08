@@ -5,7 +5,7 @@ import { useStore } from "../../store";
 export default function PackagesInner() {
   const [store, { loadPackages }] = useStore();
   return (
-    <Flex.ColumnFull class="p-4 min-h-full">
+    <Flex.ColumnFull class="p-4 min-h-full text-primary-1">
       <Suspense fallback={<RippleLoader />}>
         <For each={store.packages}>
           {(item: any) => {

@@ -18,7 +18,7 @@
     "vite-plugin-windicss": "^1.3.0"
   },
   "dependencies": {
-    "@codiechanel/solid-library": "^0.0.24",
+    "@codiechanel/solid-library": "^0.0.25",
     "@ungap/event-target": "^0.2.3",
     "@urql/core": "^2.3.3",
     "date-fns": "^2.24.0",
