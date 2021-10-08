@@ -38,15 +38,10 @@ export default function Home() {
       <Flex.RowFull className="text-gray-500 ">
         <Transition
           show={!store.drawerHidden}
-          // className="w-full h-full bg-white rounded-md shadow-lg"
+          className="flex-1 max-w-sm bg-primary-1"
           {...transitionTemplate}
         >
-          <div
-            class="flex-1 max-w-sm bg-primary-1"
-            classList={{ hidden: store.drawerHidden }}
-          >
-            <Categories />
-          </div>
+          <Categories />
         </Transition>
         <Flex.RowFull
           // flex flex-row flex-1
