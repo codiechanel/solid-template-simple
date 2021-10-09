@@ -12,7 +12,7 @@ export default function PackagesInner() {
             return (
               /*    <Link href={`/?catId=${item.id}`}>*/
               <div
-                class="hover:bg-gray-700  px-4 py-2 rounded cursor-pointer"
+                class="flowbite card hover:bg-gray-700  px-4 py-2 rounded cursor-pointer mt-4"
                 onClick={() => {
                   // navigate(`/?catId=${item.id}`, { replace: true });
                 }}

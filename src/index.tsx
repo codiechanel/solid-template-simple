@@ -6,9 +6,9 @@ import App from "./app";
 // import { setup, disconnect } from "twind/shim";
 import { Provider } from "./store"; // Tailwind V2 colors
 
-import "./one-dark.css";
+import "./theme.css";
 import "./index.css";
-
+import "./tailwind.css";
 /*
 setup({
   mode: "silent",

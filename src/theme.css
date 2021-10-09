@@ -1,0 +1,75 @@
+/*:root {
+    --primary-1: #21252b;
+    --primary-2: #282c34;
+    --primary-3: #323844;
+}
+
+.bg-primary-1 {
+    background-color: var(--primary-1);
+}
+
+.bg-primary-2 {
+    background-color: var(--primary-2);
+}
+
+.bg-primary-3 {
+    background-color: var(--primary-3);
+}*/
+
+:root, [data-theme='one-dark'] {
+    --color-bg-primary-1: #21252b;
+    --color-bg-primary-2: #282c34;
+    --color-bg-primary-3: #323844;
+    --color-bg-primary-4: #262730;
+
+    --color-bg-accent-1: #313b4a;
+    --color-bg-accent-2: #282c34;
+    --color-bg-accent-3: #0277f9;
+
+    --color-text-primary-1: white;
+    --color-text-primary-2: #ffffff80;
+
+    --color-text-accent-1: #88c3c6;
+}
+
+[data-theme='deck-ui'] {
+    --color-bg-primary-1: #1D1F24;
+    --color-bg-primary-2: #2d2f33;
+    --color-bg-primary-3: #323844;
+    --color-bg-primary-4: #262730;
+
+
+
+    --color-bg-accent-1: #FF565C;
+    --color-bg-accent-2: #353648;
+    --color-bg-accent-3: #0277f9;
+
+    --color-text-primary-1: white;
+    --color-text-primary-2: #ffffff80;
+
+    --color-text-accent-1: white;
+    /*accent FF565C*/
+}
+
+[data-theme='golo-dashboard'] {
+    --color-bg-primary-1: #1e1d2b;
+    --color-bg-primary-2: #222433;
+    --color-bg-primary-3: #2b2c3e;
+    --color-bg-primary-4: #262730;
+
+    /*#262730*/
+
+    --color-bg-accent-1: #313b4a;
+    --color-bg-accent-2: #353648;
+    --color-bg-accent-3: #0277f9;
+
+    --color-text-primary-1: white;
+    --color-text-primary-2: #514e5d;
+
+    --color-text-accent-1: #88c3c6;
+
+    /*#353648*/
+
+}
+
+
