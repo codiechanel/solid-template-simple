@@ -1,9 +1,10 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@codiechanel/solid-library': ^0.0.25
+  '@codiechanel/solid-library': ^0.0.33
   '@ungap/event-target': ^0.2.3
   '@urql/core': ^2.3.3
+  '@xstate/inspect': ^0.5.1
   autoprefixer: ^10.3.7
   date-fns: ^2.24.0
   debug: ^4.3.2
@@ -21,11 +22,13 @@ specifiers:
   vite: ^2.5.1
   vite-plugin-solid: ^2.0.3
   vite-plugin-windicss: ^1.3.0
+  xstate: ^4.25.0
 
 dependencies:
-  '@codiechanel/solid-library': 0.0.25_solid-js@1.1.1
+  '@codiechanel/solid-library': 0.0.33_solid-js@1.1.1
   '@ungap/event-target': 0.2.3
   '@urql/core': 2.3.3_graphql@15.6.0
+  '@xstate/inspect': 0.5.1
   date-fns: 2.24.0
   debug: 4.3.2
   solid-app-router: 0.1.5_solid-js@1.1.1
@@ -34,6 +37,7 @@ dependencies:
   solid-js: 1.1.1
   solid-styled-components: 0.27.3_solid-js@1.1.1
   twind: 0.16.16
+  xstate: 4.25.0
 
 devDependencies:
   autoprefixer: 10.3.7
@@ -344,8 +348,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@codiechanel/solid-library/0.0.25_solid-js@1.1.1:
-    resolution: {integrity: sha512-ibovL8RUpAf6Lbg3YhfG9d2Tss/J/gHhVQURulYK3EMclJV6zybCf2QNoHLFm74Dr7fAjVvfuHNKfPu9oDJysg==}
+  /@codiechanel/solid-library/0.0.33_solid-js@1.1.1:
+    resolution: {integrity: sha512-QQSpxWlUMQaGmWm7sIiMxYtrG5vc8jolgY1e/6isTgFC3iz/3z5/zowmm2ktZyHajZNomWx9vhVFvFCicY8XDg==}
     peerDependencies:
       goober: ^2.0.41
       solid-js: ^1.0.0
@@ -435,6 +439,14 @@ packages:
       - ts-node
       - typescript
     dev: true
+
+  /@xstate/inspect/0.5.1:
+    resolution: {integrity: sha512-m1zKFzyV/skUfpdiO/52w9o5EUporqIYEevryjcPpUEiIjVXKgti3EXl8TfXxggeNmsa2H9P0M0wZ5alM8M3Ng==}
+    peerDependencies:
+      ws: ^7.3.1
+    dependencies:
+      fast-safe-stringify: 2.1.1
+    dev: false
 
   /acorn-node/1.8.2:
     resolution: {integrity: sha512-8mt+fslDufLYntIoPAaIMUe/lrbrehIiwmR3t2k9LljIzoigEPF27eLk2hy8zSGzmR/ogr7zbRKINMo1u0yh5A==}
@@ -862,6 +874,10 @@ packages:
       merge2: 1.4.1
       micromatch: 4.0.4
     dev: true
+
+  /fast-safe-stringify/2.1.1:
+    resolution: {integrity: sha512-W+KJc2dmILlPplD/H4K9l9LcAHAfPtP6BY84uVLXQ6Evcz9Lcg33Y2z1IVblT6xdY54PXYVHEv+0Wpq8Io6zkA==}
+    dev: false
 
   /fastq/1.12.0:
     resolution: {integrity: sha512-VNX0QkHK3RsXVKr9KrlUv/FoTa0NdbYoHHl7uXHv2rzyHSlxjdNAKug2twd9luJxpcyNeAgf5iPPMutJO67Dfg==}
@@ -1878,6 +1894,10 @@ packages:
   /wrappy/1.0.2:
     resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=}
     dev: true
+
+  /xstate/4.25.0:
+    resolution: {integrity: sha512-qP7lc/ypOuuWME4ArOBnzaCa90TfHkjiqYDmxpiCjPy6FcXstInA2vH6qRVAHbPXRK4KQIYfIEOk1X38P+TldQ==}
+    dev: false
 
   /xtend/4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
