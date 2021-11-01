@@ -18,7 +18,7 @@ const App: Component = () => {
   return (
     <Flex.Column className=" min-h-full bg-primary-1 ">
       <MyNav />
-      <div class="bg-primary-3 h-[4px] " />
+      <div class="bg-primary-3 h-[4px]  " />
 
       <Routes>
         <Route path="/" element={<Home />} />

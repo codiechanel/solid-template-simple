@@ -1,6 +1,11 @@
 /* these 3 needs to be 100
 if we remove one of these, it wont work
 */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 html, body, #root {
     height: 100%;
     scrollbar-color: #323844 #21252b;
