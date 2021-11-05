@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@codiechanel/solid-library': ^0.0.33
+  '@codiechanel/solid-library': ^0.0.35
   '@ungap/event-target': ^0.2.3
   '@urql/core': ^2.3.3
   '@xstate/inspect': ^0.5.1
@@ -25,7 +25,7 @@ specifiers:
   xstate: ^4.25.0
 
 dependencies:
-  '@codiechanel/solid-library': 0.0.33_solid-js@1.1.1
+  '@codiechanel/solid-library': 0.0.35_solid-js@1.1.1+xstate@4.25.0
   '@ungap/event-target': 0.2.3
   '@urql/core': 2.3.3_graphql@15.6.0
   '@xstate/inspect': 0.5.1
@@ -345,16 +345,18 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@codiechanel/solid-library/0.0.33_solid-js@1.1.1:
-    resolution: {integrity: sha512-QQSpxWlUMQaGmWm7sIiMxYtrG5vc8jolgY1e/6isTgFC3iz/3z5/zowmm2ktZyHajZNomWx9vhVFvFCicY8XDg==}
+  /@codiechanel/solid-library/0.0.35_solid-js@1.1.1+xstate@4.25.0:
+    resolution: {integrity: sha512-mwuPomQ20k30CKqTPGCgg9VmXrkt2w1UK7QTBouMntGT376HdMx7+zvWtW9vNSCwy8yyKFjKa6MPSl2KON/I+w==}
     peerDependencies:
       goober: ^2.0.41
       solid-js: ^1.0.0
+      xstate: ^4.25.0
     dependencies:
       '@ungap/event-target': 0.2.3
       solid-icons: 0.3.2_solid-js@1.1.1
       solid-js: 1.1.1
       solid-styled-components: 0.27.3_solid-js@1.1.1
+      xstate: 4.25.0
     dev: false
 
   /@graphql-typed-document-node/core/3.1.0_graphql@15.6.0:
