@@ -21,11 +21,7 @@ const App: Component = () => {
       <div class="bg-primary-3 h-[4px]  " />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/category" element={<Home />}>
-          <Route path="/" element={<Packages />} />
-        </Route>
-        <Route path="/category/:catId" element={<Home />}>
+        <Route path="/" element={<Home />}>
           <Route path="/" element={<Packages />} />
         </Route>
       </Routes>

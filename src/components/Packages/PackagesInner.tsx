@@ -1,28 +1,42 @@
-import { For, Suspense } from "solid-js";
+import { createMemo, For, Suspense } from "solid-js";
 import { RippleLoader, Flex } from "@codiechanel/solid-library/mine";
 import { useStore } from "../../store";
+import { createStore, produce } from "solid-js/store";
 // import Flex from "../Flex";
 export default function PackagesInner() {
-  const [store, { loadPackages }] = useStore();
+  let [state, setState] = createStore({
+    list: {},
+  });
+
+  let list = createMemo(() => {
+    return Object.entries(state.list);
+  });
+
   return (
     <Flex.ColumnFull class="p-4 min-h-full text-primary-1">
-      <Suspense fallback={<RippleLoader />}>
-        <For each={store.packages}>
-          {(item: any) => {
-            return (
-              /*    <Link href={`/?catId=${item.id}`}>*/
-              <div
-                class="flowbite card hover:bg-gray-700  px-4 py-2 rounded cursor-pointer mt-4"
-                onClick={() => {
-                  // navigate(`/?catId=${item.id}`, { replace: true });
-                }}
-              >
-                {item.name}
-              </div>
-            );
-          }}
-        </For>
-      </Suspense>
+      <For each={list()}>
+        {([key, val]) => {
+          console.log("hey");
+
+          return <div>{val.name}</div>;
+        }}
+      </For>
+
+      <button
+        onClick={() => {
+          setState(
+            produce((x: any) => {
+              let newObj = {
+                key: Date.now().toString(),
+                name: "new",
+              };
+              x.list[newObj.key] = newObj;
+            })
+          );
+        }}
+      >
+        click
+      </button>
     </Flex.ColumnFull>
   );
 }
