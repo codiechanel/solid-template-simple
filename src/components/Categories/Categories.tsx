@@ -7,6 +7,7 @@ import { TwButton } from "@codiechanel/solid-library/tailwind";
 import { Modal } from "@codiechanel/solid-library/mine";
 import { useStore } from "../../store";
 import { useMediaQuery } from "@codiechanel/solid-library/hooks";
+import { Card, Button } from "@codiechanel/solid-library/flowbite";
 
 export default function Categories(props) {
   const [store, { createCategoryToDB, toggleDrawer }] = useStore();
@@ -15,7 +16,11 @@ export default function Categories(props) {
   let [categoryName, setCategoryName] = createSignal("");
   let navigate = useNavigate();
   return (
-    <div class="p-8 text-primary-1">
+    <div class="p-8 ">
+      <Card>
+        fucker
+        <Button>hui</Button>
+      </Card>
       <Modal
         show={showModal}
         innerClassName="bg-gray-800"
