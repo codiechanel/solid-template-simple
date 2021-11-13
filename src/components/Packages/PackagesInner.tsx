@@ -18,6 +18,7 @@ export default function PackagesInner() {
         {([key, val]) => {
           console.log("hey");
 
+          // @ts-ignore
           return <div>{val.name}</div>;
         }}
       </For>
