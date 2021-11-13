@@ -15,7 +15,7 @@ specifiers:
   solid-app-router: ^0.1.5
   solid-headless: ^0.8.0
   solid-icons: ^0.3.0
-  solid-js: ^1.1.1
+  solid-js: ^1.2.3
   solid-styled-components: ^0.27.3
   tailwindcss: ^2.2.19
   twind: ^0.16.16
@@ -25,17 +25,17 @@ specifiers:
   xstate: ^4.25.0
 
 dependencies:
-  '@codiechanel/solid-library': 0.0.35_solid-js@1.1.1+xstate@4.25.0
+  '@codiechanel/solid-library': 0.0.35_solid-js@1.2.3+xstate@4.25.0
   '@ungap/event-target': 0.2.3
   '@urql/core': 2.3.3_graphql@15.6.0
   '@xstate/inspect': 0.5.1
   date-fns: 2.24.0
   debug: 4.3.2
-  solid-app-router: 0.1.5_solid-js@1.1.1
-  solid-headless: 0.8.0_solid-js@1.1.1
-  solid-icons: 0.3.0_solid-js@1.1.1
-  solid-js: 1.1.1
-  solid-styled-components: 0.27.3_solid-js@1.1.1
+  solid-app-router: 0.1.5_solid-js@1.2.3
+  solid-headless: 0.8.0_solid-js@1.2.3
+  solid-icons: 0.3.0_solid-js@1.2.3
+  solid-js: 1.2.3
+  solid-styled-components: 0.27.3_solid-js@1.2.3
   tailwindcss: 2.2.19_autoprefixer@10.3.7
   twind: 0.16.16
   xstate: 4.25.0
@@ -345,7 +345,7 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@codiechanel/solid-library/0.0.35_solid-js@1.1.1+xstate@4.25.0:
+  /@codiechanel/solid-library/0.0.35_solid-js@1.2.3+xstate@4.25.0:
     resolution: {integrity: sha512-mwuPomQ20k30CKqTPGCgg9VmXrkt2w1UK7QTBouMntGT376HdMx7+zvWtW9vNSCwy8yyKFjKa6MPSl2KON/I+w==}
     peerDependencies:
       goober: ^2.0.41
@@ -353,9 +353,9 @@ packages:
       xstate: ^4.25.0
     dependencies:
       '@ungap/event-target': 0.2.3
-      solid-icons: 0.3.2_solid-js@1.1.1
-      solid-js: 1.1.1
-      solid-styled-components: 0.27.3_solid-js@1.1.1
+      solid-icons: 0.3.2_solid-js@1.2.3
+      solid-js: 1.2.3
+      solid-styled-components: 0.27.3_solid-js@1.2.3
       xstate: 4.25.0
     dev: false
 
@@ -1522,58 +1522,58 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /solid-app-router/0.1.5_solid-js@1.1.1:
+  /solid-app-router/0.1.5_solid-js@1.2.3:
     resolution: {integrity: sha512-8wxpBP1pOea4rQFba1NH6uyPFBvqcSxHB4i9dSuoQw5OABgecvrFfAe+0TbYCP/7OhJ9RcEfsej+LBEdE/YS0Q==}
     peerDependencies:
       solid-js: ^1.0.0
     dependencies:
-      solid-js: 1.1.1
+      solid-js: 1.2.3
     dev: false
 
-  /solid-headless/0.8.0_solid-js@1.1.1:
+  /solid-headless/0.8.0_solid-js@1.2.3:
     resolution: {integrity: sha512-aL/auct3K6C3dvWpBkjtKBC4hqj8WVLZOhCaQvJ/+/csIQhVKEnun8gFWv6Fd4EVdg56FVba8G0LHgiR+9jSSw==}
     engines: {node: '>=10'}
     peerDependencies:
       solid-js: ^1.1.1
     dependencies:
-      solid-js: 1.1.1
+      solid-js: 1.2.3
     dev: false
 
-  /solid-icons/0.3.0_solid-js@1.1.1:
+  /solid-icons/0.3.0_solid-js@1.2.3:
     resolution: {integrity: sha512-kYSU+YyvjGjlLyvDkj1WAG4GiJJtWBaYDOhFqTjxwdDzDGs3BrOdKtFdRMieWUUb6P83uHznNphW5XZplzIsPA==}
     peerDependencies:
       solid-js: '*'
     dependencies:
-      solid-js: 1.1.1
+      solid-js: 1.2.3
     dev: false
 
-  /solid-icons/0.3.2_solid-js@1.1.1:
+  /solid-icons/0.3.2_solid-js@1.2.3:
     resolution: {integrity: sha512-pS5HkaI0nVLxAXQ+JVIz9hIJy4COO+3dLptP+3ifHoX1FvTU//3E8/G0PQjUCIHrscgqantGtmazGKWjsnNE3Q==}
     peerDependencies:
       solid-js: '*'
     dependencies:
-      solid-js: 1.1.1
+      solid-js: 1.2.3
     dev: false
 
-  /solid-js/1.1.1:
-    resolution: {integrity: sha512-BtNNMUjBGtkx4viW5q/oqU4DOHa3WRhylN302cVVIeiBUGw6uzAE+NhNF12bAvSYJOCHLyGHpUEIeWklkeGgsg==}
+  /solid-js/1.2.3:
+    resolution: {integrity: sha512-HQv7F23wSQRIuD0gNF3L1/0MHkTEia7J9Oc4VcEeLjAenkqz89tFkztBIp0PABDqK83fxzcixhSXx0xLv4lNAQ==}
 
-  /solid-refresh/0.2.2_solid-js@1.1.1:
+  /solid-refresh/0.2.2_solid-js@1.2.3:
     resolution: {integrity: sha512-oQN3pUJ8fBd4ldMxZVqK7S4PGzAn1yx1B5bRRfANoxoqmHyY2QLfzrOzXsYnAkhh272K+W24oKgFWlmdUZ6HtQ==}
     peerDependencies:
       solid-js: ^1.0.0
     dependencies:
-      solid-js: 1.1.1
+      solid-js: 1.2.3
     dev: true
 
-  /solid-styled-components/0.27.3_solid-js@1.1.1:
+  /solid-styled-components/0.27.3_solid-js@1.2.3:
     resolution: {integrity: sha512-0TXTNeLp4zn6xyuKgNKgcuIjCzxnIyUtTSbOPC6k5/2F5REarGyJMCp00NToRfaOJskXk+ERcntNSew5SznN3g==}
     peerDependencies:
       solid-js: ^1.0.0
     dependencies:
       csstype: 2.6.18
       goober: 2.0.41_csstype@2.6.18
-      solid-js: 1.1.1
+      solid-js: 1.2.3
     dev: false
 
   /source-map-js/0.6.2:
@@ -1769,8 +1769,8 @@ packages:
       '@babel/preset-typescript': 7.15.0_@babel+core@7.15.0
       babel-preset-solid: 1.1.1_@babel+core@7.15.0
       merge-anything: 4.0.1
-      solid-js: 1.1.1
-      solid-refresh: 0.2.2_solid-js@1.1.1
+      solid-js: 1.2.3
+      solid-refresh: 0.2.2_solid-js@1.2.3
       vite: 2.5.1
     transitivePeerDependencies:
       - supports-color
