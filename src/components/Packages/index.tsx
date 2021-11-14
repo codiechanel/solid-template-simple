@@ -21,6 +21,7 @@ export default function index() {
 
   createComputed(() => {
     let cId = catId();
+    // alert(cId);
     queueMicrotask(() => {
       loadPackages(cId);
     });

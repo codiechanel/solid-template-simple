@@ -30,23 +30,25 @@ export const transitionTemplate = {
 
 export default function Home() {
   let x = useMediaQuery("(min-width: 400px)");
+  // console.log("🚀 ~ file: home.tsx ~ line 33 ~ Home ~ x", x());
 
   const [store] = useStore();
   // alert(!x() + " " + !store.drawerHidden);
   return (
     <>
       <Flex.RowFull className="text-gray-500 ">
-        <Transition
+        <Categories />
+        {/* <Transition
           show={!store.drawerHidden}
           className="flex-1 max-w-sm bg-primary-1"
           {...transitionTemplate}
         >
           <Categories />
-        </Transition>
+        </Transition> */}
         <Flex.RowFull
           // flex flex-row flex-1
           className="  bg-primary-2 "
-          classList={{ hidden: !x() && !store.drawerHidden }}
+          // classList={{ hidden: !x() && !store.drawerHidden }}
         >
           <div class=" p-4 relative  flex-1 ">
             <Scrollable>

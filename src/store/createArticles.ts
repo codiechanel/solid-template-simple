@@ -39,6 +39,9 @@ export default function createArticles(agent, actions, state, setState) {
     loadCategories() {
       setCategoriesSource(["categories"]);
     },
+    toggleCategories() {
+      setState({ showCategories: !state.showCategories });
+    },
     createCategoryToDB(name) {
       return agent.Articles.createCategoryToDB(name).then((res) => {
         let newArr = [...categories(), res];

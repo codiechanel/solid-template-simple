@@ -1,9 +1,10 @@
-import { createMemo, For, Suspense } from "solid-js";
+import { createComputed, createMemo, For, Suspense } from "solid-js";
 import { RippleLoader, Flex } from "@codiechanel/solid-library/mine";
 import { useStore } from "../../store";
 import { createStore, produce } from "solid-js/store";
 // import Flex from "../Flex";
 export default function PackagesInner() {
+  let [store] = useStore();
   let [state, setState] = createStore({
     list: {},
   });
@@ -13,17 +14,16 @@ export default function PackagesInner() {
   });
 
   return (
-    <Flex.ColumnFull class="p-4 min-h-full text-primary-1">
-      <For each={list()}>
-        {([key, val]) => {
-          console.log("hey");
-
-          // @ts-ignore
-          return <div>{val.name}</div>;
-        }}
-      </For>
-
-      <button
+    <Flex.ColumnFull class="p-4 min-h-full text-primary-1 bg-primary-3">
+      <Suspense fallback={<div>loading</div>}>
+        <For each={store.packages}>
+          {(val) => {
+            // @ts-ignore
+            return <div>{val.name}</div>;
+          }}
+        </For>
+      </Suspense>
+      {/*     <button
         onClick={() => {
           setState(
             produce((x: any) => {
@@ -37,7 +37,7 @@ export default function PackagesInner() {
         }}
       >
         click
-      </button>
+      </button> */}
     </Flex.ColumnFull>
   );
 }

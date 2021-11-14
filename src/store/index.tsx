@@ -20,6 +20,7 @@ export function Provider(props) {
   let packages, categories, drawerHidden;
 
   const [state, setState] = createStore({
+    showCategories: false,
     get packages() {
       return packages?.();
     },

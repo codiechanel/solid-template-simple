@@ -10,17 +10,14 @@ import { useMediaQuery } from "@codiechanel/solid-library/hooks";
 import { Card, Button } from "@codiechanel/solid-library/flowbite";
 
 export default function Categories(props) {
-  const [store, { createCategoryToDB, toggleDrawer }] = useStore();
+  const [store, { createCategoryToDB, toggleDrawer, toggleCategories }] =
+    useStore();
   let x = useMediaQuery("(min-width: 400px)");
   let [showModal, setShowModal] = createSignal(false);
   let [categoryName, setCategoryName] = createSignal("");
   let navigate = useNavigate();
   return (
     <div class="p-8 ">
-      <Card>
-        fucker
-        <Button>hui</Button>
-      </Card>
       <Modal
         show={showModal}
         innerClassName="bg-gray-800"
@@ -86,6 +83,9 @@ export default function Categories(props) {
                 onClick={() => {
                   if (!x()) {
                     toggleDrawer();
+                  }
+                  if (store.showCategories) {
+                    toggleCategories();
                   }
 
                   navigate(`/category/${item.id}`, { replace: true });
